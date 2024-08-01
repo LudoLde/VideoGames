@@ -1,0 +1,18 @@
+<header class="m-3">
+    <div class="d-flex justify-content-between align-items-center">
+        <a class="text-decoration-none" routerLink="/accueil">
+            <h1 routerLink="/" class="text-bg-warning">Gaming<span class="text-bg-primary">Base</span></h1>
+        </a>
+        <div>
+            <button type="button" (click)="openMenu()"  class="bg-warning position-relative rounded-5 mb-1" style="width: 44px;height: 26px;"><fa-icon [icon]="faGamepad" class="fa-2x text-primary position-absolute top-50 start-50 translate-middle"></fa-icon></button>
+                <nav [ngClass]="{'open-menu': isClicked, 'd-none': !isClicked}">
+                    <button class="btn-menu-open" (click)="openMenu()"><fa-icon [icon]="faXmark" class="fa-2x text-primary"></fa-icon></button>
+                    <ul [ngClass]="{'menu': isClicked}">
+                        <li routerLink="/article">Actualités</li>
+                        <li routerLink="/games">Jeux</li>
+                        <li>Forum</li>  
+                    </ul>
+                </nav>
+        </div>
+    </div>
+</header>

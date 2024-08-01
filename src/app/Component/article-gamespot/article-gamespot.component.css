@@ -1,0 +1,10 @@
+::ng-deep .ng-dropdown-panel {
+    background-color: rgb(233, 187, 105);
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.focused{
+    margin-bottom: 90px !important;
+}

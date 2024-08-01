@@ -1,0 +1,13 @@
+<div *ngIf="games"> 
+    <h2 class="text-center my-4 fw-bold">Games Page</h2>
+    <div class="ms-3 border w-50">
+        <ng-select (focus)="onFocusSelect()" (blur)="onBlur()" [ngClass]="{'focused': isFocused}" [items]="game$ | async" bindLabel="name" bindValue="id" [(ngModel)]="selectedGame"></ng-select>
+    </div> 
+    <div class="container mt-5 border-bottom" *ngFor="let game of games">
+        <h3 class="fw-bold fs-5">{{game.name}}</h3>
+            <p *ngIf="!game.description">{{game.deck }}</p>
+            <p>{{game.description}}</p>
+            <p>{{game.release_date | date: 'YYYY-MM'}}</p>
+        </div>
+</div>
+
